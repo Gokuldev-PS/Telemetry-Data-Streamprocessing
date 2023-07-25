@@ -36,7 +36,11 @@ In order to successfully complete this demo you need to install few tools before
 
 ## Setup
 
-1.After singup inside mongoDB altas ,On the security tab ensure that it is made publicly accessible by adding 0.0.0.0 for demo purposes.
+1.After singup inside mongoDB altas ,On the network access (security tab) ensure that it is made publicly accessible by adding 0.0.0.0 for demo purposes.
+
+<div align="center"> 
+  <img src="images/Arch_Diagram.jpeg" width =100% heigth=100%>
+</div>
 
 2.Create a Collection inside the MongoDB Database and produce some sample data on it with the format mentioned below to simplify the architecture for the demo purposes:
 
