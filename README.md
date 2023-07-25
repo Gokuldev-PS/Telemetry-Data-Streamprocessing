@@ -91,17 +91,18 @@ Confluent offers 120+ pre-built [connectors](https://www.confluent.io/product/co
 
 ## Create KSQLDB Cluster 
 
-1.One the left side as shown on the image click on KSQL tab and select create cluster myself option
+1.On the left side of the page, as shown in the image, click on the "KSQL" tab and select the "Create Cluster Myself" option.
  <div align="center"> 
   <img src="images/KSQLDB_Homepage.jpeg" width =100% heigth=100%>
 </div>
 
-2.Now select global access and click on continue and give your cluster a name and change the cluster size to 4.(Note:Download the API Key so that you can use the same key for the demo exercise)
+2.Choose "Global Access" and click on "Continue." Provide a name for your cluster and change the cluster size to 4. Note that you should download the API key to use for the demo exercise.
 
  <div align="center"> 
   <img src="images/Global_Key.jpeg" width =100% heigth=100%>
 </div>
-3.It might take few mins to get provisoned ,after that please click on the cluster where you will be redirected the below page
+3.It may take a few minutes for the cluster to be provisioned. After that, click on the cluster to be redirected to the page below.
+
 
  <div align="center"> 
   <img src="images/AfterCreationKSQL.jpeg" width =100% heigth=100%>
