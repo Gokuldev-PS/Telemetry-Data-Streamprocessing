@@ -39,7 +39,7 @@ In order to successfully complete this demo you need to install few tools before
 1.After singup inside mongoDB altas ,On the network access (security tab) ensure that it is made publicly accessible by adding 0.0.0.0 for demo purposes.
 
 <div align="center"> 
-  <img src="images/Arch_Diagram.jpeg" width =100% heigth=100%>
+  <img src="images/MongoDB_Security.jpeg" width =100% heigth=100%>
 </div>
 
 2.Create a Collection inside the MongoDB Database and produce some sample data on it with the format mentioned below to simplify the architecture for the demo purposes:
@@ -65,10 +65,10 @@ Consider this sample event as example
 
 Confluent offers 120+ pre-built [connectors](https://www.confluent.io/product/confluent-connectors/), enabling you to modernize your entire data architecture even faster. These connectors also provide you peace-of-mind with enterprise-grade security, reliability, compatibility, and support.
 
-On the Confluent Cloud UI After creating the cluster click on Connectors which is present on the left side of the Confluent Cloud UI
+1. On the Confluent Cloud UI After creating the cluster click on Connectors which is present on the left side of the Confluent Cloud UI
  
   <div align="center"> 
-  <img src="images/Arch_Diagram.jpeg" width =100% heigth=100%>
+  <img src="images/Connectors_Page.jpeg.jpeg" width =100% heigth=100%>
 </div>
 
  Click on add connectors on the top and select Mongo Atlas Source Connector and Give the approriate topic prefix as you wish and click on continue
@@ -80,7 +80,7 @@ On the Confluent Cloud UI After creating the cluster click on Connectors which i
 Now Give the approriate host name ,collection and database name which you will be able to find in mongoDB atlas account and click on create connector keeping rest of the configuration as default
 
  <div align="center"> 
-  <img src="images/Arch_Diagram.jpeg" width =100% heigth=100%>
+  <img src="images/Mongo_Source_Details.jpeg" width =100% heigth=100%>
 </div>
 
 ## Create KSQLDB Cluster 
@@ -93,7 +93,7 @@ One the left side as shown on the image click on KSQL tab and select create clus
 Now select global access and click on continue and give your cluster a name and change the cluster size to 4.
 
  <div align="center"> 
-  <img src="images/Arch_Diagram.jpeg" width =100% heigth=100%>
+  <img src="images/Global_Key.jpeg" width =100% heigth=100%>
 </div>
 
 It might take few mins to get provisoned ,after that please click on the cluster where you will be redirected the below page
@@ -124,10 +124,19 @@ Now ,execute the below  command to create a KStream
 
 2.After creating the stream,You would be able to see status as sucess as shown in the image below
 
+<div align="center"> 
+  <img src="images/Stream_Create_Success.jpeg" width =100% heigth=100%>
+</div>
+
 3.Now you can inspect the events on the KStream by clicking on query stream on the streams tab
+<div align="center"> 
+  <img src="images/Query_Stream_Option.jpeg" width =100% heigth=100%>
+</div>
 
 4.You will be able to see all the event from the topic.
-
+<div align="center"> 
+  <img src="images/Stream_Data_Display.jpeg" width =100% heigth=100%>
+</div>
 
 ## Creating Ktable to calculate player kill ratio in real-time
 
@@ -150,11 +159,29 @@ GROUP BY player_id
 EMIT CHANGES;
 
 ```
+3.After the execution of the below command you will be able to see Table creation success on the logs
+<div align="center"> 
+  <img src="images/Table_Create_Success.jpeg" width =100% heigth=100%>
+</div>
+
+4.Now you can click on inspect table option on the table menu to look into the events on the table where we will be able to see the kill/death ratio of each player in the window frame of 5 mins.
+
+<div align="center"> 
+  <img src="images/Query_Table.jpeg" width =100% heigth=100%>
+</div>
+
+5.Now if you look into the table content you will be able to see the ratio of each player in real time.
+
+<div align="center"> 
+  <img src="images/Kill:Death-Output.jpeg" width =100% heigth=100%>
+</div>
+
 ## Configure Sink Connectors
 
 Now we need to send this kill ratio events back to MongoDB using sink connector which will be updated in game server/Power BI in real time to give better real time experience for the users
 
 1.Click on connector tab and search for MongoDB Atlas Sink connector.
+
 2.Now select the topic where you have the enriched events(You can find the topic name by checking the suffix which will contain the table name like pksqlc-5x31qPLAYER_KILL_RATIO) and click on continue.
 3.Now Give the approriate host name ,collection and database name which you will be able to find in mongoDB atlas account and click on create connector keeping rest of the configuration as default
 4.Now the events will be send back to MongoDB
