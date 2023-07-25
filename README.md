@@ -92,6 +92,7 @@ Confluent offers 120+ pre-built [connectors](https://www.confluent.io/product/co
 ## Create KSQLDB Cluster 
 
 1.On the left side of the page, as shown in the image, click on the "KSQL" tab and select the "Create Cluster Myself" option.
+
  <div align="center"> 
   <img src="images/KSQLDB_Homepage.jpeg" width =100% heigth=100%>
 </div>
@@ -110,9 +111,11 @@ Confluent offers 120+ pre-built [connectors](https://www.confluent.io/product/co
 
 ## Creating Streams to gain insights from data
 
-Now we need to create KStream/KTable on the KSQLDB cluster to process the telemetry events and calcuate average kill ratio for a particular player in real time and send it back to MongoDB which can be send to PowerBI for real time visualization which will help in making the user experience better.
+To process telemetry events and calculate the average kill ratio for a particular player in real-time, we need to create a KStream/KTable on the KSQLDB cluster and send the results back to MongoDB for real-time insights either directly in game server or Power BI.
 
-1.First let us create a stream which ingest events from the input topic which is telemetry_events (Please replace with your topic name on the syntax if you have different name)
+Follow these steps:
+
+1.Create a stream to ingest events from the input topic "telemetry_events" (replace with your topic name if different). Execute the command below to create a KStream:
 
 Now ,execute the below  command to create a KStream
 ```bash
@@ -128,18 +131,24 @@ Now ,execute the below  command to create a KStream
 
 ```
 
-2.After creating the stream,You would be able to see status as sucess as shown in the image below
+2.After creating the stream, check the status to ensure it is successful. You should see "success" as shown in the image below.
+
+
 
 <div align="center"> 
   <img src="images/Stream_Create_Success.jpeg" width =100% heigth=100%>
 </div>
 
-3.Now you can inspect the events on the KStream by clicking on query stream on the streams tab
+3.Inspect the events on the KStream by clicking on "Query Stream" on the "Streams" tab.
+
+
 <div align="center"> 
   <img src="images/Query_Stream_Option.jpeg" width =100% heigth=100%>
 </div>
 
-4.You will be able to see all the event from the topic.
+4.You should be able to see all the events from the topic.
+
+
 <div align="center"> 
   <img src="images/Stream_Data_Display.jpeg" width =100% heigth=100%>
 </div>
