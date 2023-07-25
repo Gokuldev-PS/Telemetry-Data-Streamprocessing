@@ -61,7 +61,7 @@ Consider this sample event as example
 ``` 
 # Demo
 
-## Configure Source Connectors
+## Configure Source Connector
 
 Confluent offers 120+ pre-built [connectors](https://www.confluent.io/product/confluent-connectors/), enabling you to modernize your entire data architecture even faster. These connectors also provide you peace-of-mind with enterprise-grade security, reliability, compatibility, and support.
 
@@ -71,37 +71,37 @@ Confluent offers 120+ pre-built [connectors](https://www.confluent.io/product/co
   <img src="images/Connectors_Page.jpeg" width =100% heigth=100%>
 </div>
 
- Click on add connectors on the top and select Mongo Atlas Source Connector and Give the approriate topic prefix as you wish and click on continue
+2.Click on add connectors on the top and select Mongo Atlas Source Connector and Give the approriate topic prefix as you wish and click on continue
 
   <div align="center"> 
   <img src="images/Mongo_Source_COnnector.jpeg" width =100% heigth=100%>
 </div>
 
-Now Give the approriate host name ,collection and database name which you will be able to find in mongoDB atlas account and click on create connector keeping rest of the configuration as default
+3.Now Give the approriate host name ,collection and database name which you will be able to find in mongoDB atlas account and click on create connector keeping rest of the configuration as default
 
  <div align="center"> 
   <img src="images/Mongo_Source_Details.jpeg" width =100% heigth=100%>
 </div>
 
-After few mins you should be able to see the connector successfully provisoned and events coming into input topic
+4.After few mins you should be able to see the connector successfully provisoned and events coming into input topic
 
 <div align="center"> 
   <img src="images/mongo_source_connector_success.jpeg.jpeg" width =100% heigth=100%>
 </div>
+
 ## Create KSQLDB Cluster 
 
-One the left side as shown on the image click on KSQL tab and select create cluster myself option
+1.One the left side as shown on the image click on KSQL tab and select create cluster myself option
  <div align="center"> 
   <img src="images/KSQLDB_Homepage.jpeg" width =100% heigth=100%>
 </div>
 
-Now select global access and click on continue and give your cluster a name and change the cluster size to 4.
+2.Now select global access and click on continue and give your cluster a name and change the cluster size to 4.(Note:Download the API Key so that you can use the same key for the demo exercise)
 
  <div align="center"> 
   <img src="images/Global_Key.jpeg" width =100% heigth=100%>
 </div>
-
-It might take few mins to get provisoned ,after that please click on the cluster where you will be redirected the below page
+3.It might take few mins to get provisoned ,after that please click on the cluster where you will be redirected the below page
 
  <div align="center"> 
   <img src="images/AfterCreationKSQL.jpeg" width =100% heigth=100%>
@@ -198,9 +198,9 @@ Now we need to send this kill ratio events back to MongoDB using sink connector 
 4.The connector should be up and running in few mins and you will be able to see in ur MongoDB collection.
 5.This event collection can be sent to game server or power BI for visualization and real time insights.
 
-## CONGRATULATIONS
+## congratulations
 
-With the Help of Few SQL like commands we have created a real time stream processing system which is calcuate the kill ratio in real time which enriches user experience
+With the Help of Few SQL like commands we have created a real time telemetry event processing  system which is calcuate the kill ratio in real time.This data can be send back directly to Game server better use experience or it can send to Power BI for visualization as well.
 
 ## Confluent Cloud Stream Governance
 
