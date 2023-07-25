@@ -153,13 +153,12 @@ Now ,execute the below  command to create a KStream
   <img src="images/Stream_Data_Display.jpeg" width =100% heigth=100%>
 </div>
 
-## Creating Ktable to calculate player kill ratio in real-time
+## Creating Ktable to calculate player kill/Death ratio in real-time
 
-1.Now We will create a Ktable which will helps us finding number of death per kill for each user in real time .It will get updated every time a player kills/Dies within the particular window in real time
+1.Create a KTable that updates every time a player kills/dies within a particular window in real-time. Execute the KSQL command below. Note that for this example, we have taken the tumbling window as 5 minutes, but you can choose your own window size.
 
 
-2.To create the Ktable ,Execute the below KSQL Command
-  (Note :For my example i have taken the tumbling window as 5 mins you can have as you wish)
+2.After executing the command, check the logs to ensure that the table creation was successful.
 
 ```bash
 
@@ -174,7 +173,7 @@ GROUP BY player_id
 EMIT CHANGES;
 
 ```
-3.After the execution of the below command you will be able to see Table creation success on the logs
+3.Click on "Inspect Table" on the table menu to look into the events on the table. You should be able to see the kill/death ratio of each player in the 5-minute window frame.
 <div align="center"> 
   <img src="images/Table_Create_Success.jpeg" width =100% heigth=100%>
 </div>
@@ -185,7 +184,7 @@ EMIT CHANGES;
   <img src="images/Query_Table.jpeg" width =100% heigth=100%>
 </div>
 
-5.Now if you look into the table content you will be able to see the ratio of each player in real time.
+5.Look into the table content to see the ratio of each player in real-time.
 
 <div align="center"> 
   <img src="images/Kill:Death-Output.jpeg" width =100% heigth=100%>
@@ -193,24 +192,26 @@ EMIT CHANGES;
 
 ## Configure Sink Connectors
 
-Now we need to send this kill ratio events back to MongoDB using sink connector which will be updated in game server/Power BI in real time to give better real time experience for the users
+To send the kill ratio events back to MongoDB using a sink connector, follow these steps:
 
-1. Click on connector tab and search for MongoDB Atlas Sink connector.
+1. Click on the "Connector" tab and search for the "MongoDB Atlas Sink Connector."
    <div align="center"> 
   <img src="images/MongoSink.jpeg" width =100% heigth=100%>
 </div>
 
-2.Now select the topic where you have the enriched events(You can find the topic name by checking the suffix which will contain the table name like pksqlc-5x31qPLAYER_KILL_RATIO) and click on continue.
+2.Select the topic where you have the enriched events. You can find the topic name by checking the suffix, which will contain the table name like "pksqlc-PLAYER_KILL_RATIO"
 <div align="center"> 
   <img src="images/SInk_topic_selection.jpeg" width =100% heigth=100%>
 </div>
-3.Now Give the approriate host name ,collection and database name which you will be able to find in mongoDB atlas account and click on create connector keeping rest of the configuration as default as same as source we did in source connector.
-4.The connector should be up and running in few mins and you will be able to see in ur MongoDB collection.
-5.This event collection can be sent to game server or power BI for visualization and real time insights.
+3.Provide the appropriate host name, collection, and database name, which can be found in your MongoDB Atlas account. Click on "Create Connector," keeping the rest of the configuration as default, the same as the source connector.
+
+4.The connector should be up and running in a few minutes, and you should be able to see events in your MongoDB collection.
+
+5.This event collection can be sent to the game server or Power BI for visualization and real-time insights.
 
 ## congratulations
 
-With the Help of Few SQL like commands we have created a real time telemetry event processing  system which is calcuate the kill ratio in real time.This data can be send back directly to Game server better use experience or it can send to Power BI for visualization as well.
+By utilizing SQL-like commands, we have developed a real-time telemetry event processing system that calculates the kill ratio for each player in real-time. This system can send the results directly back to the game server, improving the overall user experience, or to Power BI for visualization and real-time insights. With this system, we can process and analyze data in real-time, allowing for better decision-making and driving better business outcomes.
 
 ## Confluent Cloud Stream Governance
 
