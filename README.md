@@ -68,7 +68,7 @@ Confluent offers 120+ pre-built [connectors](https://www.confluent.io/product/co
 1. On the Confluent Cloud UI After creating the cluster click on Connectors which is present on the left side of the Confluent Cloud UI
  
   <div align="center"> 
-  <img src="images/Connectors_Page.jpeg.jpeg" width =100% heigth=100%>
+  <img src="images/Connectors_Page.jpeg" width =100% heigth=100%>
 </div>
 
  Click on add connectors on the top and select Mongo Atlas Source Connector and Give the approriate topic prefix as you wish and click on continue
