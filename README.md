@@ -65,25 +65,25 @@ Consider this sample event as example
 
 Confluent offers 120+ pre-built [connectors](https://www.confluent.io/product/confluent-connectors/), enabling you to modernize your entire data architecture even faster. These connectors also provide you peace-of-mind with enterprise-grade security, reliability, compatibility, and support.
 
-1. On the Confluent Cloud UI After creating the cluster click on Connectors which is present on the left side of the Confluent Cloud UI
+1. On the Confluent Cloud UI, navigate to the Connectors section located on the left side of the page after creating the cluster.
  
   <div align="center"> 
   <img src="images/Connectors_Page.jpeg" width =100% heigth=100%>
 </div>
 
-2.Click on add connectors on the top and select Mongo Atlas Source Connector and Give the approriate topic prefix as you wish and click on continue
+2.Click on "Add Connectors" at the top of the page, select "Mongo Atlas Source Connector," and provide an appropriate topic prefix. Then, click on "Continue."
 
   <div align="center"> 
   <img src="images/Mongo_Source_COnnector.jpeg" width =100% heigth=100%>
 </div>
 
-3.Now Give the approriate host name ,collection and database name which you will be able to find in mongoDB atlas account and click on create connector keeping rest of the configuration as default
+3.Enter the appropriate host name, collection, and database name which can be found in your MongoDB Atlas account. Click on "Create Connector," leaving the rest of the configuration as default.
 
  <div align="center"> 
   <img src="images/Mongo_Source_Details.jpeg" width =100% heigth=100%>
 </div>
 
-4.After few mins you should be able to see the connector successfully provisoned and events coming into input topic
+4.After a few minutes, you should be able to see the connector successfully provisioned and events coming into the input topic.
 
 <div align="center"> 
   <img src="images/mongo_source_connector_success.jpeg.jpeg" width =100% heigth=100%>
