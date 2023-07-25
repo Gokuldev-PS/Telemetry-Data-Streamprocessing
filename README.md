@@ -92,7 +92,7 @@ After few mins you should be able to see the connector successfully provisoned a
 
 One the left side as shown on the image click on KSQL tab and select create cluster myself option
  <div align="center"> 
-  <img src="images/Arch_Diagram.jpeg" width =100% heigth=100%>
+  <img src="images/KSQLDB_Homepage.jpeg" width =100% heigth=100%>
 </div>
 
 Now select global access and click on continue and give your cluster a name and change the cluster size to 4.
@@ -104,7 +104,7 @@ Now select global access and click on continue and give your cluster a name and 
 It might take few mins to get provisoned ,after that please click on the cluster where you will be redirected the below page
 
  <div align="center"> 
-  <img src="images/Arch_Diagram.jpeg" width =100% heigth=100%>
+  <img src="images/AfterCreationKSQL.jpeg" width =100% heigth=100%>
 </div>
 
 ## Creating Streams to gain insights from data
@@ -185,11 +185,18 @@ EMIT CHANGES;
 
 Now we need to send this kill ratio events back to MongoDB using sink connector which will be updated in game server/Power BI in real time to give better real time experience for the users
 
-1.Click on connector tab and search for MongoDB Atlas Sink connector.
+1. Click on connector tab and search for MongoDB Atlas Sink connector.
+   <div align="center"> 
+  <img src="images/MongoSink.jpeg" width =100% heigth=100%>
+</div>
 
 2.Now select the topic where you have the enriched events(You can find the topic name by checking the suffix which will contain the table name like pksqlc-5x31qPLAYER_KILL_RATIO) and click on continue.
-3.Now Give the approriate host name ,collection and database name which you will be able to find in mongoDB atlas account and click on create connector keeping rest of the configuration as default
-4.Now the events will be send back to MongoDB
+<div align="center"> 
+  <img src="images/SInk_topic_selection.jpeg" width =100% heigth=100%>
+</div>
+3.Now Give the approriate host name ,collection and database name which you will be able to find in mongoDB atlas account and click on create connector keeping rest of the configuration as default as same as source we did in source connector.
+4.The connector should be up and running in few mins and you will be able to see in ur MongoDB collection.
+5.This event collection can be sent to game server or power BI for visualization and real time insights.
 
 ## CONGRATULATIONS
 
