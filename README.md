@@ -39,7 +39,7 @@ In order to successfully complete this demo you need to install few tools before
 1.After signing up for MongoDB Atlas, navigate to the "Network Access" (security tab) and make sure to enable public accessibility by adding the IP address 0.0.0.0. This is for demonstration purposes.
 
 <div align="center"> 
-  <img src="images/MongoDB_Security.jpeg" width =100% heigth=100%>
+  <img src="images/MongoDB_Security.jpeg" width =100% heigth=100% margin-top:20px margin-botton:20 px>
 </div>
 
 2.Generate a Collection within your MongoDB Database and populate it with sample data. Use the format provided below to streamline the architecture for the purpose of this demo.
