@@ -74,7 +74,7 @@ Confluent offers 120+ pre-built [connectors](https://www.confluent.io/product/co
  Click on add connectors on the top and select Mongo Atlas Source Connector and Give the approriate topic prefix as you wish and click on continue
 
   <div align="center"> 
-  <img src="images/Arch_Diagram.jpeg" width =100% heigth=100%>
+  <img src="images/Mongo_Source_COnnector.jpeg" width =100% heigth=100%>
 </div>
 
 Now Give the approriate host name ,collection and database name which you will be able to find in mongoDB atlas account and click on create connector keeping rest of the configuration as default
@@ -83,6 +83,11 @@ Now Give the approriate host name ,collection and database name which you will b
   <img src="images/Mongo_Source_Details.jpeg" width =100% heigth=100%>
 </div>
 
+After few mins you should be able to see the connector successfully provisoned and events coming into input topic
+
+<div align="center"> 
+  <img src="images/mongo_source_connector_success.jpeg.jpeg" width =100% heigth=100%>
+</div>
 ## Create KSQLDB Cluster 
 
 One the left side as shown on the image click on KSQL tab and select create cluster myself option
