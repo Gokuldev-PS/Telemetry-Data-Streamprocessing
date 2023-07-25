@@ -146,6 +146,40 @@ GROUP BY player_id
 EMIT CHANGES;
 
 ```
+## Configure Sink Connectors
 
+Now we need to send this kill ratio events back to MongoDB using sink connector which will be updated in game server/Power BI in real time to give better real time experience for the users
+
+1.Click on connector tab and search for MongoDB Atlas Sink connector.
+2.Now select the topic where you have the enriched events(You can find the topic name by checking the suffix which will contain the table name like pksqlc-5x31qPLAYER_KILL_RATIO) and click on continue.
+3.Now Give the approriate host name ,collection and database name which you will be able to find in mongoDB atlas account and click on create connector keeping rest of the configuration as default
+4.Now the events will be send back to MongoDB
+
+## CONGRATULATIONS
+
+With the Help of Few SQL like commands we have created a real time stream processing system which is calcuate the kill ratio in real time which enriches user experience
+
+## Confluent Cloud Stream Governance
+
+Confluent offers data governance tools such as Stream Quality, Stream Catalog, and Stream Lineage in a package called Stream Governance. These features ensure your data is high quality, observable and discoverable. Learn more about **Stream Governance** [here](https://www.confluent.io/product/stream-governance/) and refer to the [docs](https://docs.confluent.io/cloud/current/stream-governance/overview.html) page for detailed information.
+
+1.  Navigate to https://confluent.cloud
+1.  Use the left hand-side menu and click on **Stream Lineage**.
+    Stream lineage provides a graphical UI of the end to end flow of your data. Both from the a bird’s eye view and drill-down magnification for answering questions like:
+
+    - Where did data come from?
+    - Where is it going?
+    - Where, when, and how was it transformed?
+
+    In the bird's eye view you see how one stream feeds into another one. As your pipeline grows and becomes more complex, you can use Stream lineage to debug and see where things go wrong and break.
+
+---
+# References
+
+1. MongoDB Atlas Source Connector for Confluent Cloud [doc](https://docs.confluent.io/cloud/current/connectors/cc-mongo-db-source.html)
+2. MongoDB Atlas Sink Connector for Confluent Cloud [doc](https://docs.confluent.io/cloud/current/connectors/cc-mongo-db-sink.html)
+3. Peering Connections in Confluent Cloud [doc](https://docs.confluent.io/cloud/current/networking/peering/index.html)
+4. ksqlDB [page](https://www.confluent.io/product/ksqldb/) and [use cases](https://developer.confluent.io/tutorials/#explore-top-use-cases)
+5. Stream Governance [page](https://www.confluent.io/product/stream-governance/) and [doc](https://docs.confluent.io/cloud/current/stream-governance/overview.html)
 
   
