@@ -37,7 +37,6 @@ In order to successfully complete this demo you need to install few tools before
 ## Setup
 
 1.After signing up for MongoDB Atlas, navigate to the "Network Access" (security tab) and make sure to enable public accessibility by 
-
 adding the IP address 0.0.0.0. This is for demonstration purposes.
 
 <div align="center"> 
@@ -74,19 +73,19 @@ Confluent offers 120+ pre-built [connectors](https://www.confluent.io/product/co
   <img src="images/Connectors_Page.jpeg" width =100% heigth=100%>
 </div>
 
-1.Click on "Add Connectors" at the top of the page, select "Mongo Atlas Source Connector," and provide an appropriate topic prefix. Then, click on "Continue."
+1. Click on "Add Connectors" at the top of the page, select "Mongo Atlas Source Connector," and provide an appropriate topic prefix. Then, click on "Continue."
 
   <div align="center"> 
   <img src="images/Mongo_Source_COnnector.jpeg" width =100% heigth=100%>
 </div>
 
-1.Enter the appropriate host name, collection, and database name which can be found in your MongoDB Atlas account. Click on "Create Connector," leaving the rest of the configuration as default.
+1. Enter the appropriate host name, collection, and database name which can be found in your MongoDB Atlas account. Click on "Create Connector," leaving the rest of the configuration as default.
 
  <div align="center"> 
   <img src="images/Mongo_Source_Details.jpeg" width =100% heigth=100%>
 </div>
 
-1.After a few minutes, you should be able to see the connector successfully provisioned and events coming into the input topic.
+1. After a few minutes, you should be able to see the connector successfully provisioned and events coming into the input topic.
 
 <div align="center"> 
   <img src="images/mongo_source_connector_success.jpeg.jpeg" width =100% heigth=100%>
