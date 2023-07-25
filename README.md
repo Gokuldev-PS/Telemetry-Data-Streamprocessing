@@ -74,19 +74,19 @@ Confluent offers 120+ pre-built [connectors](https://www.confluent.io/product/co
   <img src="images/Connectors_Page.jpeg" width =100% heigth=100%>
 </div>
 
-2.Click on "Add Connectors" at the top of the page, select "Mongo Atlas Source Connector," and provide an appropriate topic prefix. Then, click on "Continue."
+1.Click on "Add Connectors" at the top of the page, select "Mongo Atlas Source Connector," and provide an appropriate topic prefix. Then, click on "Continue."
 
   <div align="center"> 
   <img src="images/Mongo_Source_COnnector.jpeg" width =100% heigth=100%>
 </div>
 
-3.Enter the appropriate host name, collection, and database name which can be found in your MongoDB Atlas account. Click on "Create Connector," leaving the rest of the configuration as default.
+1.Enter the appropriate host name, collection, and database name which can be found in your MongoDB Atlas account. Click on "Create Connector," leaving the rest of the configuration as default.
 
  <div align="center"> 
   <img src="images/Mongo_Source_Details.jpeg" width =100% heigth=100%>
 </div>
 
-4.After a few minutes, you should be able to see the connector successfully provisioned and events coming into the input topic.
+1.After a few minutes, you should be able to see the connector successfully provisioned and events coming into the input topic.
 
 <div align="center"> 
   <img src="images/mongo_source_connector_success.jpeg.jpeg" width =100% heigth=100%>
