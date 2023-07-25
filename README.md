@@ -40,7 +40,7 @@ In order to successfully complete this demo you need to install few tools before
 adding the IP address 0.0.0.0. This is for demonstration purposes.
 
 <div align="center"> 
-  <img src="images/MongoDB_Security.jpeg" width =50% heigth=50% margin-top:20px margin-botton:20 px>
+  <img src="images/MongoDB_Security.jpeg" width =100% heigth=100% margin-top:20px margin-botton:20 px>
 </div>
 
 
@@ -104,6 +104,7 @@ Confluent offers 120+ pre-built [connectors](https://www.confluent.io/product/co
  <div align="center"> 
   <img src="images/Global_Key.jpeg" width =100% heigth=100%>
 </div>
+
 3.It may take a few minutes for the cluster to be provisioned. After that, click on the cluster to be redirected to the page below.
 
 
@@ -175,6 +176,7 @@ GROUP BY player_id
 EMIT CHANGES;
 
 ```
+
 3.Click on "Inspect Table" on the table menu to look into the events on the table. You should be able to see the kill/death ratio of each player in the 5-minute window frame.
 <div align="center"> 
   <img src="images/Table_Create_Success.jpeg" width =100% heigth=100%>
@@ -185,6 +187,7 @@ EMIT CHANGES;
 <div align="center"> 
   <img src="images/Query_Table.jpeg" width =100% heigth=100%>
 </div>
+
 
 5.Look into the table content to see the ratio of each player in real-time.
 
@@ -205,6 +208,7 @@ To send the kill ratio events back to MongoDB using a sink connector, follow the
 <div align="center"> 
   <img src="images/SInk_topic_selection.jpeg" width =100% heigth=100%>
 </div>
+
 3.Provide the appropriate host name, collection, and database name, which can be found in your MongoDB Atlas account. Click on "Create Connector," keeping the rest of the configuration as default, the same as the source connector.
 
 4.The connector should be up and running in a few minutes, and you should be able to see events in your MongoDB collection.
