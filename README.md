@@ -36,7 +36,7 @@ In order to successfully complete this demo you need to install few tools before
 
 ## Setup
 
-- After signing up for MongoDB Atlas, navigate to the "Network Access" (security tab) and make sure to enable public accessibility by 
+1.After signing up for MongoDB Atlas, navigate to the "Network Access" (security tab) and make sure to enable public accessibility by 
 adding the IP address 0.0.0.0. This is for demonstration purposes.
 
 <div align="center"> 
@@ -44,7 +44,7 @@ adding the IP address 0.0.0.0. This is for demonstration purposes.
 </div>
 
 
-- Generate a Collection within your MongoDB Database and populate it with sample data. Use the format provided below to streamline the architecture for the purpose of this demo.
+2.Generate a Collection within your MongoDB Database and populate it with sample data. Use the format provided below to streamline the architecture for the purpose of this demo.
 
  ```bash
 {
@@ -67,25 +67,25 @@ Consider this sample event as example
 
 Confluent offers 120+ pre-built [connectors](https://www.confluent.io/product/confluent-connectors/), enabling you to modernize your entire data architecture even faster. These connectors also provide you peace-of-mind with enterprise-grade security, reliability, compatibility, and support.
 
-- On the Confluent Cloud UI, navigate to the Connectors section located on the left side of the page after creating the cluster.
+1.On the Confluent Cloud UI, navigate to the Connectors section located on the left side of the page after creating the cluster.
  
   <div align="center"> 
   <img src="images/Connectors_Page.jpeg" width =100% heigth=100%>
 </div>
 
-- Click on "Add Connectors" at the top of the page, select "Mongo Atlas Source Connector," and provide an appropriate topic prefix. Then, click on "Continue."
+2.Click on "Add Connectors" at the top of the page, select "Mongo Atlas Source Connector," and provide an appropriate topic prefix. Then, click on "Continue."
 
   <div align="center"> 
   <img src="images/Mongo_Source_COnnector.jpeg" width =100% heigth=100%>
 </div>
 
-- Enter the appropriate host name, collection, and database name which can be found in your MongoDB Atlas account. Click on "Create Connector," leaving the rest of the configuration as default.
+3.Enter the appropriate host name, collection, and database name which can be found in your MongoDB Atlas account. Click on "Create Connector," leaving the rest of the configuration as default.
 
  <div align="center"> 
   <img src="images/Mongo_Source_Details.jpeg" width =100% heigth=100%>
 </div>
 
-- After a few minutes, you should be able to see the connector successfully provisioned and events coming into the input topic.
+4.After a few minutes, you should be able to see the connector successfully provisioned and events coming into the input topic.
 
 <div align="center"> 
   <img src="images/mongo_source_connector_success.jpeg.jpeg" width =100% heigth=100%>
