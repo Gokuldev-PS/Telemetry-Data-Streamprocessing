@@ -40,7 +40,7 @@ In order to successfully complete this demo you need to install few tools before
 adding the IP address 0.0.0.0. This is for demonstration purposes.
 
 <div align="center"> 
-  <img src="images/MongoDB_Security.jpeg" width =60% heigth=100% margin-top:20px margin-botton:20 px>
+  <img src="images/MongoDB_Security.jpeg" width =50% heigth=50% margin-top:20px margin-botton:20 px>
 </div>
 
 
