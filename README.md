@@ -223,13 +223,13 @@ You want to delete any resources that were created during the demo so you don't 
 
 ## Delete KTable
 
-1.Go to KSQLDB Cluster and click on table option on the top and select the ktable(PLAYER_KILL_RATIO) that you have created.
+1. To access the ktable (PLAYER_KILL_RATIO) that you have created, navigate to the table option at the top of the KSQLDB Cluster interface and select it.
 
 <div align="center"> 
   <img src="images/table_delte.jpeg" width =100% heigth=100%>
 </div>
 
-2.Click on Drop table button available on the bottom and type the table name again and then the table should get deleted.
+2.To delete a table in KSQLDB, click on the Drop table button at the bottom of the interface, re-enter the table name, and confirm the deletion.
 
 <div align="center"> 
   <img src="images/Drop_table.jpeg" width =100% heigth=100%>
@@ -237,15 +237,15 @@ You want to delete any resources that were created during the demo so you don't 
 
 ##Delete KStreams
 
-1.Similar to Ktable Deletion go to streams tab and select your stream name and finally select drop stream option that is available in the bottom
+1. To delete a stream in KSQLDB, navigate to the Streams tab, select your stream name, and click on the Drop stream option available at the bottom of the interface.
 
 <div align="center"> 
   <img src="images/drop_stream.jpeg" width =100% heigth=100%>
 </div>
 
-##Delete KSQL Cluster
+## Delete KSQL Cluster
 
-After deletion of ktable and kstreams click on delete cluster option that is available in action tab.Then you KSQLDB should get deleted.
+Once you have deleted your ktable and kstreams in KSQLDB, navigate to the Action tab and click on the Delete cluster option. This will delete your KSQLDB instance.
 
 <div align="center"> 
   <img src="images/cluster_delete.jpeg" width =100% heigth=100%>
@@ -253,15 +253,15 @@ After deletion of ktable and kstreams click on delete cluster option that is ava
 
 ## Delete Source and Sink MongoDB Connector
 
-1.Go the connector tab and click on connector that you have created.
+1.To access a connector that you have created in KSQLDB, navigate to the Connector tab and select it.
 
-2.Click on settings that is available on the top and select delete connector option that is present on the bottom
+2.To delete the connector, first, access the settings located at the top of the page. Then, scroll down to the bottom and select the option to delete the connector.
 
 <div align="center"> 
   <img src="images/Connector_delete.jpeg" width =100% heigth=100%>
 </div>
 
-Follow the same steps for sink connector as well
+The process to delete the sink connector is the same, so you can use the same steps.
 
 
 ## Confluent Cloud Stream Governance
