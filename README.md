@@ -88,7 +88,7 @@ Confluent offers 120+ pre-built [connectors](https://www.confluent.io/product/co
 4.After a few minutes, you should be able to see the connector successfully provisioned and events coming into the input topic.
 
 <div align="center"> 
-  <img src="images/mongo_source_connector_success.jpeg.jpeg" width =100% heigth=100%>
+  <img src="images/mongo_source_connector_success.jpeg" width =100% heigth=100%>
 </div>
 
 ## Create KSQLDB Cluster 
