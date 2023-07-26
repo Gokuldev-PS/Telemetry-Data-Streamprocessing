@@ -226,13 +226,13 @@ You want to delete any resources that were created during the demo so you don't 
 1.Go to KSQLDB Cluster and click on table option on the top and select the ktable(PLAYER_KILL_RATIO) that you have created.
 
 <div align="center"> 
-  <img src="images/Kill:Death-Output.jpeg" width =100% heigth=100%>
+  <img src="images/table_delte.jpeg" width =100% heigth=100%>
 </div>
 
 2.Click on Drop table button available on the bottom and type the table name again and then the table should get deleted.
 
 <div align="center"> 
-  <img src="images/Kill:Death-Output.jpeg" width =100% heigth=100%>
+  <img src="images/Drop_table.jpeg" width =100% heigth=100%>
 </div>
 
 ##Delete KStreams
@@ -240,13 +240,16 @@ You want to delete any resources that were created during the demo so you don't 
 1.Similar to Ktable Deletion go to streams tab and select your stream name and finally select drop stream option that is available in the bottom
 
 <div align="center"> 
-  <img src="images/Kill:Death-Output.jpeg" width =100% heigth=100%>
+  <img src="images/drop_stream.jpeg" width =100% heigth=100%>
 </div>
 
 ##Delete KSQL Cluster
 
 After deletion of ktable and kstreams click on delete cluster option that is available in action tab.Then you KSQLDB should get deleted.
 
+<div align="center"> 
+  <img src="images/cluster_delete.jpeg" width =100% heigth=100%>
+</div>
 
 ## Delete Source and Sink MongoDB Connector
 
@@ -255,7 +258,7 @@ After deletion of ktable and kstreams click on delete cluster option that is ava
 2.Click on settings that is available on the top and select delete connector option that is present on the bottom
 
 <div align="center"> 
-  <img src="images/Kill:Death-Output.jpeg" width =100% heigth=100%>
+  <img src="images/Connector_delete.jpeg" width =100% heigth=100%>
 </div>
 
 Follow the same steps for sink connector as well
