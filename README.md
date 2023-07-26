@@ -216,6 +216,51 @@ To send the kill ratio events back to MongoDB using a sink connector, follow the
 
 By utilizing SQL-like commands, we have developed a real-time telemetry event processing system that calculates the kill ratio for each player in real-time. This system can send the results directly back to the game server, improving the overall user experience, or to Power BI for visualization and real-time insights. With this system, we can process and analyze data in real-time, allowing for better decision-making and driving better business outcomes.
 
+# Teardown
+
+You want to delete any resources that were created during the demo so you don't incur additional charges.
+
+
+## Delete KTable
+
+1.Go to KSQLDB Cluster and click on table option on the top and select the ktable(PLAYER_KILL_RATIO) that you have created.
+
+<div align="center"> 
+  <img src="images/Kill:Death-Output.jpeg" width =100% heigth=100%>
+</div>
+
+2.Click on Drop table button available on the bottom and type the table name again and then the table should get deleted.
+
+<div align="center"> 
+  <img src="images/Kill:Death-Output.jpeg" width =100% heigth=100%>
+</div>
+
+##Delete KStreams
+
+1.Similar to Ktable Deletion go to streams tab and select your stream name and finally select drop stream option that is available in the bottom
+
+<div align="center"> 
+  <img src="images/Kill:Death-Output.jpeg" width =100% heigth=100%>
+</div>
+
+##Delete KSQL Cluster
+
+After deletion of ktable and kstreams click on delete cluster option that is available in action tab.Then you KSQLDB should get deleted.
+
+
+## Delete Source and Sink MongoDB Connector
+
+1.Go the connector tab and click on connector that you have created.
+
+2.Click on settings that is available on the top and select delete connector option that is present on the bottom
+
+<div align="center"> 
+  <img src="images/Kill:Death-Output.jpeg" width =100% heigth=100%>
+</div>
+
+Follow the same steps for sink connector as well
+
+
 ## Confluent Cloud Stream Governance
 
 Confluent offers data governance tools such as Stream Quality, Stream Catalog, and Stream Lineage in a package called Stream Governance. These features ensure your data is high quality, observable and discoverable. Learn more about **Stream Governance** [here](https://www.confluent.io/product/stream-governance/) and refer to the [docs](https://docs.confluent.io/cloud/current/stream-governance/overview.html) page for detailed information.
