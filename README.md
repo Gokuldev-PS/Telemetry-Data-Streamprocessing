@@ -235,7 +235,7 @@ You want to delete any resources that were created during the demo so you don't 
   <img src="images/Drop_table.jpeg" width =100% heigth=100%>
 </div>
 
-##Delete KStreams
+## Delete KStreams
 
 1. To delete a stream in KSQLDB, navigate to the Streams tab, select your stream name, and click on the Drop stream option available at the bottom of the interface.
 
