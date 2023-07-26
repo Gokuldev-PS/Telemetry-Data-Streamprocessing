@@ -176,20 +176,17 @@ GROUP BY player_id
 EMIT CHANGES;
 
 ```
-
-3.Click on "Inspect Table" on the table menu to look into the events on the table. You should be able to see the kill/death ratio of each player in the 5-minute window frame.
 <div align="center"> 
   <img src="images/Table_Create_Success.jpeg" width =100% heigth=100%>
 </div>
 
-4.Now you can click on inspect table option on the table menu to look into the events on the table where we will be able to see the kill/death ratio of each player in the window frame of 5 mins.
-
+3.Click on "Inspect Table" on the table menu to look into the events on the table. You should be able to see the kill/death ratio of each player in the 5-minute window frame.
 <div align="center"> 
   <img src="images/Query_Table.jpeg" width =100% heigth=100%>
 </div>
 
 
-5.Look into the table content to see the ratio of each player in real-time.
+4.Look into the table content to see the ratio of each player in real-time.
 
 <div align="center"> 
   <img src="images/Kill:Death-Output.jpeg" width =100% heigth=100%>
