@@ -180,7 +180,7 @@ EMIT CHANGES;
   <img src="images/Table_Create_Success.jpeg" width =100% heigth=100%>
 </div>
 
-3.Click on "Inspect Table" on the table menu to look into the events on the table. You should be able to see the kill/death ratio of each player in the 5-minute window frame.
+3.Click on "Query Table" on the table menu to look into the events on the table. You should be able to see the kill/death ratio of each player in the 5-minute window frame.
 <div align="center"> 
   <img src="images/Query_Table.jpeg" width =100% heigth=100%>
 </div>
