@@ -233,7 +233,7 @@ Confluent offers data governance tools such as Stream Quality, Stream Catalog, a
 
 # References
 
-1. MongoDB Atlas Source Connector for Confluent Cloud [doc](https://docs.confluent.io/platform/current/connect/index.html)
+1.Connectors for Confluent Cloud [doc](https://docs.confluent.io/platform/current/connect/index.html)
 2. Peering Connections in Confluent Cloud [doc](https://docs.confluent.io/cloud/current/networking/peering/index.html)
 3. ksqlDB [page](https://www.confluent.io/product/ksqldb/) and [use cases](https://developer.confluent.io/tutorials/#explore-top-use-cases)
 4. Stream Governance [page](https://www.confluent.io/product/stream-governance/) and [doc](https://docs.confluent.io/cloud/current/stream-governance/overview.html)
