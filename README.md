@@ -12,7 +12,7 @@ This demo makes use of a Python data generator script to transmit telemetry even
   <img src="images/Final_Arch.jpeg" width =100% heigth=100%>
 </div>
 
-# Requirements
+
 
 # Requirements
 
@@ -62,7 +62,6 @@ variable "confluent_cloud_api_secret" {
    ```bash
    cd terraform
    ```
-1. Log into your AWS account through command line.
 
 1. Initialize Terraform within the directory.
    ```
@@ -81,57 +80,7 @@ variable "confluent_cloud_api_secret" {
    > **Note:** Read the `main.tf` configuration file [to see what will be created](./terraform/main.tf).
 
 
- 
-# Demo
-
-## Configure Source Connector
-
-Confluent offers 120+ pre-built [connectors](https://www.confluent.io/product/confluent-connectors/), enabling you to modernize your entire data architecture even faster. These connectors also provide you peace-of-mind with enterprise-grade security, reliability, compatibility, and support.
-
-1.On the Confluent Cloud UI, navigate to the Connectors section located on the left side of the page after creating the cluster.
- 
-  <div align="center"> 
-  <img src="images/Connectors_Page.jpeg" width =100% heigth=100%>
-</div>
-
-2.Click on "Add Connectors" at the top of the page, select "Mongo Atlas Source Connector," and provide an appropriate topic prefix. Then, click on "Continue."
-
-  <div align="center"> 
-  <img src="images/Mongo_Source_COnnector.jpeg" width =100% heigth=100%>
-</div>
-
-3.Enter the appropriate host name, collection, and database name which can be found in your MongoDB Atlas account. Click on "Create Connector," leaving the rest of the configuration as default.
-
- <div align="center"> 
-  <img src="images/Mongo_Source_Details.jpeg" width =100% heigth=100%>
-</div>
-
-4.After a few minutes, you should be able to see the connector successfully provisioned and events coming into the input topic.
-
-<div align="center"> 
-  <img src="images/mongo_source_connector_success.jpeg" width =100% heigth=100%>
-</div>
-
-## Create KSQLDB Cluster 
-
-1.On the left side of the page, as shown in the image, click on the "KSQL" tab and select the "Create Cluster Myself" option.
-
- <div align="center"> 
-  <img src="images/KSQLDB_Homepage.jpeg" width =100% heigth=100%>
-</div>
-
-2.Choose "Global Access" and click on "Continue." Provide a name for your cluster and change the cluster size to 4. Note that you should download the API key to use for the demo exercise.
-
- <div align="center"> 
-  <img src="images/Global_Key.jpeg" width =100% heigth=100%>
-</div>
-
-3.It may take a few minutes for the cluster to be provisioned. After that, click on the cluster to be redirected to the page below.
-
-
- <div align="center"> 
-  <img src="images/AfterCreationKSQL.jpeg" width =100% heigth=100%>
-</div>
+ # Demo
 
 ## Creating Streams to gain insights from data
 
