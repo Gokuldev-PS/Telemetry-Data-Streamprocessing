@@ -6,7 +6,7 @@ This demo guides you through the process of utilizing telemetry events to extrac
 
 ## Architecture Diagram
 
-This demo makes use of a Python data generator script to transmit telemetry events from the game server to Confluent Cloud. The events are then processed through KSQLDB, where they are enriched with additional data and real-time calculations are performed to determine the average kills per death for players. The enriched data can be sent to any external system of your choice for further analysis using a connector plugin.
+This demo makes use of a Python data generator script to transmit telemetry events from the game server to Confluent Cloud. The events are then processed through KSQLDB, where they are enriched to perform real-time calculations to determine the average kills per death for players. The enriched data can be sent to any external system of your choice for further analysis using a connector plugin.
 
 <div align="center"> 
   <img src="images/Final_Arch.jpeg" width =100% heigth=100%>
@@ -104,7 +104,7 @@ python mock_data_generator.py
 
 Now that you have data flowing through Confluent, you can now easily build stream processing applications using ksqlDB. You are able to continuously transform, enrich, join, and aggregate your data using simple SQL syntax. You can gain value from your data directly from Confluent in real-time. Also, ksqlDB is a fully managed service within Confluent Cloud with a 99.9% uptime SLA. You can now focus on developing services and building your data pipeline while letting Confluent manage your resources for you.
 
-If you’re interested in learning more about ksqlDB and the differences between streams and tables, I recommend reading these two blogs [here](https://www.confluent.io/blog/kafka-streams-tables-part-3-event-processing-fundamentals/) and [here](https://www.confluent.io/blog/how-real-time-stream-processing-works-with-ksqldb/) or try different use cases by leveraging existing ksqlDB [recipes](https://developer.confluent.io/tutorials/#explore-top-use-cases).
+If you’re interested in learning more about ksqlDB and the differences between streams and tables, I recommend reading these two blogs [here](https://www.confluent.io/blog/kafka-streams-tables-part-3-event-processing-fundamentals/) and [here](https://www.confluent.io/blog/how-real-time-stream-processing-works-with-ksqldb/).
 
 1. On the navigation menu click on **ksqlDB** and step into the cluster you created during setup.
    To write streaming queries against topics, you will need to register the topics with ksqlDB as a stream or table.
