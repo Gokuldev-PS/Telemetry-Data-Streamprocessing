@@ -39,7 +39,7 @@ def main():
           
             producer.produce(TOPIC_NAME, mock_data.encode('utf-8'), callback=delivery_report)
             producer.flush()
-            time.sleep(1)  # Send a new message every 1 second
+            time.sleep(30)  # Send a new message every 1 second
     except KeyboardInterrupt:
         print("User interrupted, stopping data generation.")
     finally:
