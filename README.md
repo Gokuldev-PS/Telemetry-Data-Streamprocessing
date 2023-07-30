@@ -85,6 +85,16 @@ variable "confluent_cloud_api_secret" {
  ## Execute Python Script to Generate Mock Data
 
     Please run the Python script located in the Python script folder. Before running it, make sure to replace the below mentioned  configuration settings in the code to point to your Confluent Cloud cluster that you created.
+```
+BOOTSTRAP_SERVERS = ''  # Replace with your Confluent Cloud bootstrap servers
+SASL_USERNAME = ''  # Replace with your Confluent Cloud API key
+SASL_PASSWORD = ''  # Replace with your Confluent Cloud API secret
+```
+To obtain the following details, navigate to the Clients section on the Confluent Cloud UI and select Python as the script type. From there, you can copy the bootstrap server and API Key details and replace them in the code.
+
+<div align="center"> 
+  <img src="images/Client.jpeg" width =100% heigth=100%>
+</div>
 
 ## Creating Streams to gain insights from data
 
