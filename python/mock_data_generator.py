@@ -14,9 +14,9 @@ def generate_mock_data():
     event_types = ['kill', 'death']
     current_time = int(time.time())  # Get the current UNIX timestamp
     data= {
-        'userid': random.choice(user_ids),
-        'eventtype': random.choice(event_types),
-        'time': current_time
+        'player_id': random.choice(user_ids),
+        'event_type': random.choice(event_types),
+        'timestamp': current_time
     }
     return json.dumps(data)
 def delivery_report(err, msg):
