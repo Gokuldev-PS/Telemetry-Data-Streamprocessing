@@ -56,7 +56,31 @@ variable "confluent_cloud_api_secret" {
   default = "Replace with your API Key created during pre-requsite"   
 }
 ```
-  
+ ### Build your cloud infrastructure
+
+1. Navigate to the repo's terraform directory.
+   ```bash
+   cd terraform
+   ```
+1. Log into your AWS account through command line.
+
+1. Initialize Terraform within the directory.
+   ```
+   terraform init
+   ```
+1. Create the Terraform plan.
+   ```
+   terraform plan 
+   ```
+1. Apply the plan to create the infrastructure.
+
+   ```
+   terraform apply myplan
+   ```
+
+   > **Note:** Read the `main.tf` configuration file [to see what will be created](./terraform/main.tf).
+
+
  
 # Demo
 
