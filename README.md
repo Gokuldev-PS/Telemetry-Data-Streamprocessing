@@ -14,10 +14,18 @@ This demo makes use of a Python data generator script to transmit telemetry even
 
 # Requirements
 
+# Requirements
+
 In order to successfully complete this demo you need to install few tools before getting started.
 
 - If you don't have a Confluent Cloud account, sign up for a free trial [here](https://www.confluent.io/confluent-cloud/tryfree).
-- if you don't have a MongoDB Atlas account, sign up for a free trial [here] (https://www.mongodb.com/cloud/atlas/register).
+- Install Confluent Cloud CLI by following the instructions [here](https://docs.confluent.io/confluent-cli/current/install.html).
+- Install Terraform if you dont have it installed already by following the instructions [here](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)  
+- This demo uses Python 3.9.13 version.
+- This demo uses python modules. You can install this module through `pip`.
+  ```
+  pip3 install modulename
+  ```
 
 ## Prerequisites
 
