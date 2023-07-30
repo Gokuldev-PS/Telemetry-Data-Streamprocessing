@@ -146,7 +146,7 @@ If you’re interested in learning more about ksqlDB and the differences between
 
  ```
 
- CREATE TABLE player_kill_ratio AS
+ CREATE TABLE player_kill_ratio  with (kafka_topic = ‘player_kill_ratio’) AS
 SELECT player_id,
        SUM(CASE WHEN event_type = 'kill' THEN 1 ELSE 0 END) as kill_count,
        SUM(CASE WHEN event_type = 'death' THEN 1 ELSE 0 END) as death_count,
@@ -161,7 +161,7 @@ EMIT CHANGES;
 6. Use the following statement to query `player_kill_ratio` table to ensure it's being populated correctly.
 
    ```SQL
-   SELECT * FROM fd_customers;
+   SELECT * FROM player_kill_ratio;
    ```
 
    Stop the running query by clicking on **Stop**.
