@@ -67,14 +67,11 @@ variable "confluent_cloud_api_secret" {
    ```
    terraform init
    ```
-1. Create the Terraform plan.
-   ```
-   terraform plan 
-   ```
+
 1. Apply the plan to create the infrastructure.
 
    ```
-   terraform apply myplan
+   terraform apply 
    ```
 
    > **Note:** Read the `main.tf` configuration file [to see what will be created](./terraform/main.tf).
@@ -96,16 +93,36 @@ To obtain the following details, navigate to the Clients section on the Confluen
   <img src="images/Client.jpeg" width =100% heigth=100%>
 </div>
 
-## Creating Streams to gain insights from data
+Please run the Python script using the following syntax:
 
-To process telemetry events and calculate the average kill ratio for a particular player in real-time, we need to create a KStream/KTable on the KSQLDB cluster and send the results back to MongoDB for real-time insights either directly in game server or Power BI.
+```
+python mock_data_generator.py
+```
 
-Follow these steps:
 
-1.Create a stream to ingest events from the input topic "telemetry_events" (replace with your topic name if different). Execute the command below to create a KStream:
+## Enrich Data Streams with ksqlDB
 
-Now ,execute the below  command to create a KStream
-```bash
+Now that you have data flowing through Confluent, you can now easily build stream processing applications using ksqlDB. You are able to continuously transform, enrich, join, and aggregate your data using simple SQL syntax. You can gain value from your data directly from Confluent in real-time. Also, ksqlDB is a fully managed service within Confluent Cloud with a 99.9% uptime SLA. You can now focus on developing services and building your data pipeline while letting Confluent manage your resources for you.
+
+If you’re interested in learning more about ksqlDB and the differences between streams and tables, I recommend reading these two blogs [here](https://www.confluent.io/blog/kafka-streams-tables-part-3-event-processing-fundamentals/) and [here](https://www.confluent.io/blog/how-real-time-stream-processing-works-with-ksqldb/) or try different use cases by leveraging existing ksqlDB [recipes](https://developer.confluent.io/tutorials/#explore-top-use-cases).
+
+1. On the navigation menu click on **ksqlDB** and step into the cluster you created during setup.
+
+  
+
+To write streaming queries against topics, you will need to register the topics with ksqlDB as a stream or table.
+
+2. **VERY IMPORTANT** -- at the bottom of the editor, set `auto.offset.reset` to `earliest`, or enter the statement:
+
+   ```SQL
+   SET 'auto.offset.reset' = 'earliest';
+   ```
+
+   If you use the default value of `latest`, then ksqlDB will read form the tail of the topics rather than the beginning, which means streams and tables won't have all the data you think they should.
+
+3. Create a ksqlDB stream from `telemetry` topic.
+
+ ```
 
   CREATE STREAM telemetry_stream (
   player_id VARCHAR,
@@ -115,39 +132,22 @@ Now ,execute the below  command to create a KStream
   KAFKA_TOPIC='telemetry_events',
   VALUE_FORMAT=‘JSON’
 );
+ ```
+4. Use the following statement to query `telemetry_stream ` stream to ensure it's being populated correctly.
 
-```
+   ```
+   SELECT * FROM telemetry_stream EMIT CHANGES;
+   ```
 
-2.After creating the stream, check the status to ensure it is successful. You should see "success" as shown in the image below.
+   Stop the running query by clicking on **Stop**.
 
-
-
-<div align="center"> 
-  <img src="images/Stream_Create_Success.jpeg" width =100% heigth=100%>
-</div>
-
-3.Inspect the events on the KStream by clicking on "Query Stream" on the "Streams" tab.
-
-
-<div align="center"> 
-  <img src="images/Query_Stream_Option.jpeg" width =100% heigth=100%>
-</div>
-
-4.You should be able to see all the events from the topic.
-
-
-<div align="center"> 
+   <div align="center"> 
   <img src="images/Stream_Data_Display.jpeg" width =100% heigth=100%>
 </div>
 
-## Creating Ktable to calculate player kill/Death ratio in real-time
+5. Create `player_kill_ratio` table based on the `telemetry_stream` stream you just created.The table is updated in real-time every time a player kills or dies within a specific window. It is important to note that in this example, the tumbling window is set to 5 minutes, but you have the flexibility to choose your own window size.
 
-1.Create a KTable that updates every time a player kills/dies within a particular window in real-time. Execute the KSQL command below. Note that for this example, we have taken the tumbling window as 5 minutes, but you can choose your own window size.
-
-
-2.After executing the command, check the logs to ensure that the table creation was successful.
-
-```bash
+ ```
 
  CREATE TABLE player_kill_ratio AS
 SELECT player_id,
@@ -160,21 +160,18 @@ GROUP BY player_id
 EMIT CHANGES;
 
 ```
-<div align="center"> 
-  <img src="images/Table_Create_Success.jpeg" width =100% heigth=100%>
-</div>
 
-3.Click on "Query Table" on the table menu to look into the events on the table. You should be able to see the kill/death ratio of each player in the 5-minute window frame.
-<div align="center"> 
-  <img src="images/Query_Table.jpeg" width =100% heigth=100%>
-</div>
+7. Use the following statement to query `player_kill_ratio` table to ensure it's being populated correctly.
 
+   ```SQL
+   SELECT * FROM fd_customers;
+   ```
 
-4.Look into the table content to see the ratio of each player in real-time.
-
+   Stop the running query by clicking on **Stop**.
 <div align="center"> 
   <img src="images/Kill:Death-Output.jpeg" width =100% heigth=100%>
 </div>
+
 
 ## Configure Sink Connectors
 
