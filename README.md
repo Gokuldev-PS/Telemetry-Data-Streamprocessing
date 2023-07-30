@@ -20,7 +20,7 @@ In order to successfully complete this demo you need to install few tools before
 
 - If you don't have a Confluent Cloud account, sign up for a free trial [here](https://www.confluent.io/confluent-cloud/tryfree).
 - Install Confluent Cloud CLI by following the instructions [here](https://docs.confluent.io/confluent-cli/current/install.html).
-- Please follow the instructions to install Terraform if it is not already installed on your system.s [here](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)  
+- Please follow the instructions to install Terraform if it is not already installed on your system.[here](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)  
 - This demo uses Python 3.9.13 version.
 - This demo uses python modules. You can install this module through `pip`.
   ```
@@ -36,6 +36,10 @@ In order to successfully complete this demo you need to install few tools before
 1. When provided with the _username_ and _password_ prompts, fill in your credentials.
 
    > **Note:** If you're logging in for the first time you will see a wizard that will walk you through the some tutorials. Minimize this as you will walk through these steps in this guide.
+
+1. Create Confluent Cloud API keys by following [this](https://registry.terraform.io/providers/confluentinc/confluent/latest/docs/guides/sample-project#summary) guide.
+   > **Note:** This is different than Kafka cluster API keys.
+
 
 
 ### MongoDB Atlas
