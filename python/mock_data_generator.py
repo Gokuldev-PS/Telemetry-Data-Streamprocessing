@@ -36,7 +36,7 @@ def main():
     try:
         while True:
             mock_data = generate_mock_data()
-          #  message_value = f"{mock_data['userid']},{mock_data['eventtype']},{mock_data['time']}"
+          
             producer.produce(TOPIC_NAME, mock_data.encode('utf-8'), callback=delivery_report)
             producer.flush()
             time.sleep(1)  # Send a new message every 1 second
