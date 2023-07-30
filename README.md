@@ -82,6 +82,10 @@ variable "confluent_cloud_api_secret" {
 
  # Demo
 
+ ## Execute Python Script to Generate Mock Data
+
+    Please run the Python script located in the Python script folder. Before running it, make sure to replace the below mentioned  configuration settings in the code to point to your Confluent Cloud cluster that you created.
+
 ## Creating Streams to gain insights from data
 
 To process telemetry events and calculate the average kill ratio for a particular player in real-time, we need to create a KStream/KTable on the KSQLDB cluster and send the results back to MongoDB for real-time insights either directly in game server or Power BI.
