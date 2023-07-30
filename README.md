@@ -40,39 +40,24 @@ In order to successfully complete this demo you need to install few tools before
 1. Create Confluent Cloud API keys by following [this](https://registry.terraform.io/providers/confluentinc/confluent/latest/docs/guides/sample-project#summary) guide.
    > **Note:** This is different than Kafka cluster API keys.
 
-
-
-### MongoDB Atlas
-
-1. Sign up for a free MongoDB Atlas account [here](https://www.mongodb.com/).
-
 ## Setup
 
-1.After signing up for MongoDB Atlas, navigate to the "Network Access" (security tab) and make sure to enable public accessibility by 
-adding the IP address 0.0.0.0. This is for demonstration purposes.
+1. This demo uses Terraform  to spin up resources that are needed.
 
-<div align="center"> 
-  <img src="images/MongoDB_Security.jpeg" width =100% heigth=100% margin-top:20px margin-botton:20 px>
-</div>
+2. Update the `terraform/variables.tf` file for the following variables with your Cloud API credentials.
 
+```
+variable "confluent_cloud_api_key" {
+  
+  default = " Replace with your API Key created during pre-requsite"   
+}
 
-2.Generate a Collection within your MongoDB Database and populate it with sample data. Use the format provided below to streamline the architecture for the purpose of this demo.
-
- ```bash
-{
-   playerid:string,
-   timestamp:bigint,
-   eventtype:kill/death(String)
+variable "confluent_cloud_api_secret" {
+  default = "Replace with your API Key created during pre-requsite"   
 }
 ```
-Consider this sample event as example
-```bash
-
-{   playerid:A01,
-    timestamp:167892345678,
-    eventtype:kill
-}
-``` 
+  
+ 
 # Demo
 
 ## Configure Source Connector
