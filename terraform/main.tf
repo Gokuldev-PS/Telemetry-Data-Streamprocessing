@@ -85,7 +85,7 @@ resource "confluent_kafka_topic" "telemetry_events" {
   
 resource "confluent_ksql_cluster" "example" {
   display_name = "example"
-  csu          = 1
+  csu          = 4
   kafka_cluster {
     id = confluent_kafka_cluster.basic.id
   }
