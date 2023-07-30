@@ -183,7 +183,7 @@ You can create  Sink connector either through CLI or Confluent Cloud web UI.
    confluent connect cluster create --config-file confluent/connect_config.json
    ```
 
-
+**Note:** Before executing the command, substitute the connect properties with the filename that you are using.
 
 </details>
 <br>
@@ -210,49 +210,11 @@ By utilizing SQL-like commands, we have developed a real-time telemetry event pr
 
 You want to delete any resources that were created during the demo so you don't incur additional charges.
 
+## Infrastructure
 
-## Delete KTable
-
-1. To access the ktable (PLAYER_KILL_RATIO) that you have created, navigate to the table option at the top of the KSQLDB Cluster interface and select it.
-
-<div align="center"> 
-  <img src="images/table_delte.jpeg" width =100% heigth=100%>
-</div>
-
-2.To delete a table in KSQLDB, click on the Drop table button at the bottom of the interface, re-enter the table name, and confirm the deletion.
-
-<div align="center"> 
-  <img src="images/Drop_table.jpeg" width =100% heigth=100%>
-</div>
-
-## Delete KStreams
-
-1. To delete a stream in KSQLDB, navigate to the Streams tab, select your stream name, and click on the Drop stream option available at the bottom of the interface.
-
-<div align="center"> 
-  <img src="images/drop_stream.jpeg" width =100% heigth=100%>
-</div>
-
-## Delete KSQL Cluster
-
-Once you have deleted your ktable and kstreams in KSQLDB, navigate to the Action tab and click on the Delete cluster option. This will delete your KSQLDB instance.
-
-<div align="center"> 
-  <img src="images/cluster_delete.jpeg" width =100% heigth=100%>
-</div>
-
-## Delete Source and Sink MongoDB Connector
-
-1.To access a connector that you have created in KSQLDB, navigate to the Connector tab and select it.
-
-2.To delete the connector, first, access the settings located at the top of the page. Then, scroll down to the bottom and select the option to delete the connector.
-
-<div align="center"> 
-  <img src="images/Connector_delete.jpeg" width =100% heigth=100%>
-</div>
-
-The process to delete the sink connector is the same, so you can use the same steps.
-
+1. Run the following command to delete all resources created by Terraform
+   ```bash
+   terraform apply -destory
 
 ## Confluent Cloud Stream Governance
 
@@ -271,10 +233,9 @@ Confluent offers data governance tools such as Stream Quality, Stream Catalog, a
 
 # References
 
-1. MongoDB Atlas Source Connector for Confluent Cloud [doc](https://docs.confluent.io/cloud/current/connectors/cc-mongo-db-source.html)
-2. MongoDB Atlas Sink Connector for Confluent Cloud [doc](https://docs.confluent.io/cloud/current/connectors/cc-mongo-db-sink.html)
-3. Peering Connections in Confluent Cloud [doc](https://docs.confluent.io/cloud/current/networking/peering/index.html)
-4. ksqlDB [page](https://www.confluent.io/product/ksqldb/) and [use cases](https://developer.confluent.io/tutorials/#explore-top-use-cases)
-5. Stream Governance [page](https://www.confluent.io/product/stream-governance/) and [doc](https://docs.confluent.io/cloud/current/stream-governance/overview.html)
+1. MongoDB Atlas Source Connector for Confluent Cloud [doc](https://docs.confluent.io/platform/current/connect/index.html)
+2. Peering Connections in Confluent Cloud [doc](https://docs.confluent.io/cloud/current/networking/peering/index.html)
+3. ksqlDB [page](https://www.confluent.io/product/ksqldb/) and [use cases](https://developer.confluent.io/tutorials/#explore-top-use-cases)
+4. Stream Governance [page](https://www.confluent.io/product/stream-governance/) and [doc](https://docs.confluent.io/cloud/current/stream-governance/overview.html)
 
   
