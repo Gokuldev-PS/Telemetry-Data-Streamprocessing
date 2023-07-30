@@ -193,7 +193,7 @@ You can create  Sink connector either through CLI or Confluent Cloud web UI.
 
 1. On the navigation menu, select **Connectors** and **+ Add connector**.
 1. In the search bar search for your connector and select the connector.
-1. Create a new Atlas Sink connector and complete the required fields 
+1. Create a new  Sink connector and complete the required fields.
 
 </details>
 <br>
