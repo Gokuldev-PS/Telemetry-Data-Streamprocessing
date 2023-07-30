@@ -107,10 +107,7 @@ Now that you have data flowing through Confluent, you can now easily build strea
 If you’re interested in learning more about ksqlDB and the differences between streams and tables, I recommend reading these two blogs [here](https://www.confluent.io/blog/kafka-streams-tables-part-3-event-processing-fundamentals/) and [here](https://www.confluent.io/blog/how-real-time-stream-processing-works-with-ksqldb/) or try different use cases by leveraging existing ksqlDB [recipes](https://developer.confluent.io/tutorials/#explore-top-use-cases).
 
 1. On the navigation menu click on **ksqlDB** and step into the cluster you created during setup.
-
-  
-
-To write streaming queries against topics, you will need to register the topics with ksqlDB as a stream or table.
+   To write streaming queries against topics, you will need to register the topics with ksqlDB as a stream or table.
 
 2. **VERY IMPORTANT** -- at the bottom of the editor, set `auto.offset.reset` to `earliest`, or enter the statement:
 
@@ -161,7 +158,7 @@ EMIT CHANGES;
 
 ```
 
-7. Use the following statement to query `player_kill_ratio` table to ensure it's being populated correctly.
+6. Use the following statement to query `player_kill_ratio` table to ensure it's being populated correctly.
 
    ```SQL
    SELECT * FROM fd_customers;
@@ -173,25 +170,37 @@ EMIT CHANGES;
 </div>
 
 
-## Configure Sink Connectors
+## Connect External System  to sink Enriched Events from  Confluent Cloud using Connector
 
-To send the kill ratio events back to MongoDB using a sink connector, follow these steps:
+You can create  Sink connector either through CLI or Confluent Cloud web UI.
 
-1. Click on the "Connector" tab and search for the "MongoDB Atlas Sink Connector."
-   <div align="center"> 
-  <img src="images/MongoSink.jpeg" width =100% heigth=100%>
-</div>
+<details>
+    <summary><b>CLI</b></summary>
 
-2.Select the topic where you have the enriched events. You can find the topic name by checking the suffix, which will contain the table name like "pksqlc-PLAYER_KILL_RATIO"
-<div align="center"> 
-  <img src="images/SInk_topic_selection.jpeg" width =100% heigth=100%>
-</div>
+1. Run the following command to create the  Sink connector.
 
-3.Provide the appropriate host name, collection, and database name, which can be found in your MongoDB Atlas account. Click on "Create Connector," keeping the rest of the configuration as default, the same as the source connector.
+   ```bash
+   confluent connect cluster create --config-file confluent/connect_config.json
+   ```
 
-4.The connector should be up and running in a few minutes, and you should be able to see events in your MongoDB collection.
 
-5.This event collection can be sent to the game server or Power BI for visualization and real-time insights.
+
+</details>
+<br>
+
+<details>
+    <summary><b>Confluent Cloud Web UI</b></summary>
+
+1. On the navigation menu, select **Connectors** and **+ Add connector**.
+1. In the search bar search for your connector and select the connector.
+1. Create a new Atlas Sink connector and complete the required fields 
+
+</details>
+<br>
+
+Once the connector is in **Running** state navigate to your database/external system and verify messages are showing up correctly.
+
+Refer to our [documentation](https://www.confluent.io/product/connectors/) for detailed instructions about the  connector that are available.
 
 ## Congratulations
 
