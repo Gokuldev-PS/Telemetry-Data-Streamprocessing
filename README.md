@@ -104,7 +104,7 @@ python mock_data_generator.py
 
 Now that you have data flowing through Confluent, you can now easily build stream processing applications using ksqlDB. You are able to continuously transform, enrich, join, and aggregate your data using simple SQL syntax. You can gain value from your data directly from Confluent in real-time. Also, ksqlDB is a fully managed service within Confluent Cloud with a 99.9% uptime SLA. You can now focus on developing services and building your data pipeline while letting Confluent manage your resources for you.
 
-<B>This section will involve the creation of a KStream and KTable that will calculate the kills to death ratio for each player in real-time, using windowing time.<B>
+<B>This section will involve the creation of a KStream and KTable that will calculate the kills to death ratio for each player in real-time using simple SQL like commands.<B>
 
 If you’re interested in learning more about ksqlDB and the differences between streams and tables, I recommend reading these two blogs [here](https://www.confluent.io/blog/kafka-streams-tables-part-3-event-processing-fundamentals/) and [here](https://www.confluent.io/blog/how-real-time-stream-processing-works-with-ksqldb/).
 
