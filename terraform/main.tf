@@ -104,8 +104,4 @@ resource "confluent_ksql_cluster" "example" {
   }
 }
 
-resource "ksql_stream" "stream" {
-  name  = "STREAM_01"
-  query = "   CREATE STREAM telemetry_stream (player_id VARCHAR,event_type VARCHAR,timestamp BIGINT) WITH (KAFKA_TOPIC='sample',VALUE_FORMAT=‘JSON’);"
 
-}
