@@ -212,6 +212,11 @@ By utilizing SQL-like commands, we have developed a real-time telemetry event pr
 
 You want to delete any resources that were created during the demo so you don't incur additional charges.
 
+
+## Python Script
+
+Go back to the terminal window where the [/mock_data_generator.py](./python//mock_data_generator.py) is running and quit with `Ctrl+C`.
+
 ## Infrastructure
 
 1. Run the following command to delete all resources created by Terraform
