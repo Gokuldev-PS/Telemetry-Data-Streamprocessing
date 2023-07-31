@@ -215,7 +215,7 @@ You want to delete any resources that were created during the demo so you don't 
 
 ## Python Script
 
-Go back to the terminal window where the [/mock_data_generator.py](./python//mock_data_generator.py) is running and quit with `Ctrl+C`.
+Go back to the terminal window where the [mock_data_generator.py](./python//mock_data_generator.py) is running and quit with `Ctrl+C`.
 
 ## Infrastructure
 
