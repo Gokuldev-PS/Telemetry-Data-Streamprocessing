@@ -241,7 +241,7 @@ In our use case, the stream lineage appears as follows: we utilize a Python scri
 
 # References
 
-1.Connectors for Confluent Cloud [doc](https://docs.confluent.io/platform/current/connect/index.html)
+1. Connectors for Confluent Cloud [doc](https://docs.confluent.io/platform/current/connect/index.html)
 
 2. Peering Connections in Confluent Cloud [doc](https://docs.confluent.io/cloud/current/networking/peering/index.html)
 3. ksqlDB [page](https://www.confluent.io/product/ksqldb/) and [use cases](https://developer.confluent.io/tutorials/#explore-top-use-cases)
