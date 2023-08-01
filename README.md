@@ -37,7 +37,7 @@ In order to successfully complete this demo you need to install few tools before
 
    > **Note:** If you're logging in for the first time you will see a wizard that will walk you through the some tutorials. Minimize this as you will walk through these steps in this guide.
 
-1. Create Confluent Cloud API keys by following [this](https://registry.terraform.io/providers/confluentinc/confluent/latest/docs/guides/sample-project#summary) guide.
+1. Create Confluent Cloud API keys by following the steps in UI 
    > **Note:** This is different than Kafka cluster API keys.
 
 ## Setup
